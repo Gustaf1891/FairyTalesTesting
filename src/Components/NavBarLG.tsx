@@ -14,8 +14,7 @@ const NavBarLG = () => {
       >
         <HStack paddingX="10px">
           <Text
-            fontSize="2xl"
-            textColor="black"
+            fontSize="xl"
             textStyle="bold"
             whiteSpace="normal"
           >
@@ -39,7 +38,7 @@ const NavBarLG = () => {
         </HStack>
         <HStack paddingX="10px">
           <ColorModeSwitch />
-          <Button>Login</Button>
+          <Button size='sm'>Login</Button>
         </HStack>
       </HStack>
     </>
