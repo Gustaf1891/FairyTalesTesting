@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
-import NavBarLG from "./Components/NavBarLG";
+import NavBarBase from "./Components/NavBar/NavBarBase";
+import NavBarLG from "./Components/NavBar/NavBarLG";
 
 const App = () => {
   return (
@@ -8,9 +9,18 @@ const App = () => {
         base: `"nav" "main" "main2" "main3" "footer"`,
         lg: `"nav nav" "aside main" "aside2 main2" "aside3 main3" "footer footer"`,
       }}
+      templateColumns={{
+        base: "1fr",
+        lg: "600px 1fr",
+      }}
     >
       <GridItem area="nav" bg="#D7816A">
-        <NavBarLG />
+        <Show below="lg">
+          <NavBarBase />
+        </Show>
+        <Show above="lg">
+          <NavBarLG />
+        </Show>
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" bg="#DDEDAA">
