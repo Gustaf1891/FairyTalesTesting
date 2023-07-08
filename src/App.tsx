@@ -6,15 +6,15 @@ const App = () => {
   return (
     <Grid
       templateAreas={{
-        base: `"nav" "main" "main2" "main3" "footer"`,
-        lg: `"nav nav" "aside main" "aside2 main2" "aside3 main3" "footer footer"`,
+        base: `"nav" "header" "main" "main2" "main3" "footer"`,
+        lg: `"nav nav" "header header" "aside main" "aside2 main2" "aside3 main3" "footer footer"`,
       }}
       templateColumns={{
         base: "1fr",
         lg: "600px 1fr",
       }}
     >
-      <GridItem area="nav" bg="#D7816A">
+      <GridItem area="nav" >
         <Show below="lg">
           <NavBarBase />
         </Show>
@@ -22,6 +22,7 @@ const App = () => {
           <NavBarLG />
         </Show>
       </GridItem>
+      <GridItem area="header" bg='#D7816A'>Header</GridItem>
       <Show above="lg">
         <GridItem area="aside" bg="#DDEDAA">
           Aside
