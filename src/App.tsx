@@ -5,8 +5,7 @@ import {
   HStack,
   Text,
   VStack,
-  Box,
-  Center,
+  Box
 } from "@chakra-ui/react";
 import NavBarBase from "./Components/NavBar/NavBarBase";
 import NavBarLG from "./Components/NavBar/NavBarLG";
