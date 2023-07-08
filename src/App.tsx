@@ -1,6 +1,16 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import {
+  Grid,
+  GridItem,
+  Show,
+  HStack,
+  Text,
+  VStack,
+  Box,
+  Center,
+} from "@chakra-ui/react";
 import NavBarBase from "./Components/NavBar/NavBarBase";
 import NavBarLG from "./Components/NavBar/NavBarLG";
+import ReadingAnimationLottie from "./Components/ReadingAnimation";
 
 const App = () => {
   return (
@@ -14,7 +24,7 @@ const App = () => {
         lg: "600px 1fr",
       }}
     >
-      <GridItem area="nav" >
+      <GridItem area="nav">
         <Show below="lg">
           <NavBarBase />
         </Show>
@@ -22,7 +32,28 @@ const App = () => {
           <NavBarLG />
         </Show>
       </GridItem>
-      <GridItem area="header" bg='#D7816A'>Header</GridItem>
+      <GridItem area="header" bg="#D7816A">
+        <Show above="lg">
+          <HStack justifyContent="normal">
+            <Box paddingX="10px">
+              <Text fontStyle="oblique" color="Black" as="b" fontSize="6xl">
+                Create customized children's books!
+              </Text>
+            </Box>
+            <Box paddingX="150px">
+              <ReadingAnimationLottie />
+            </Box>
+          </HStack>
+        </Show>
+        <Show below="lg">
+          <VStack justifyContent="normal">
+            <Text textAlign='center' paddingY='10px' fontStyle="oblique" color="Black" as="b" fontSize="4xl">
+              Create customized children's books!
+            </Text>
+            <ReadingAnimationLottie />
+          </VStack>
+        </Show>
+      </GridItem>
       <Show above="lg">
         <GridItem area="aside" bg="#DDEDAA">
           Aside
