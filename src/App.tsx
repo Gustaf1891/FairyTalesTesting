@@ -5,7 +5,7 @@ import {
   HStack,
   Text,
   VStack,
-  Box
+  Box,
 } from "@chakra-ui/react";
 import NavBarBase from "./Components/NavBar/NavBarBase";
 import NavBarLG from "./Components/NavBar/NavBarLG";
@@ -46,7 +46,14 @@ const App = () => {
         </Show>
         <Show below="lg">
           <VStack justifyContent="normal">
-            <Text textAlign='center' paddingY='10px' fontStyle="oblique" color="Black" as="b" fontSize="4xl">
+            <Text
+              textAlign="center"
+              paddingY="10px"
+              fontStyle="oblique"
+              color="Black"
+              as="b"
+              fontSize="4xl"
+            >
               Create customized children's books!
             </Text>
             <ReadingAnimationLottie />
@@ -59,7 +66,9 @@ const App = () => {
         </GridItem>
       </Show>
       <GridItem area="main" bg="#D6EDFF">
-        Main
+        <Box>
+          Main 1
+        </Box>
       </GridItem>
       <Show above="lg">
         <GridItem area="aside2" bg="#DDEDAA">
@@ -83,5 +92,6 @@ const App = () => {
     </Grid>
   );
 };
+
 
 export default App;
