@@ -1,0 +1,25 @@
+.swiper {
+  width: 50vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-color: black;
+  --swiper-navigation-position:
+}
+
+.img-slide {
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.img-slide img {
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}

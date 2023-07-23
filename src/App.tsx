@@ -10,13 +10,14 @@ import {
 import NavBarBase from "./Components/NavBar/NavBarBase";
 import NavBarLG from "./Components/NavBar/NavBarLG";
 import ReadingAnimationLottie from "./Components/ReadingAnimation";
+import ImageCarousel from "./Components/ImageCarousel/ImageCarousel";
 
 const App = () => {
   return (
     <Grid
       templateAreas={{
         base: `"nav" "header" "main" "main2" "main3" "footer"`,
-        lg: `"nav nav" "header header" "aside main" "aside2 main2" "aside3 main3" "footer footer"`,
+        lg: `"nav nav" "header header" "aside main" "main2 main2" "main3 main3" "footer footer"`,
       }}
       templateColumns={{
         base: "1fr",
@@ -62,27 +63,64 @@ const App = () => {
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" bg="#DDEDAA">
-          Aside
+          <VStack justifyContent="normal">
+            <Text
+              textAlign="center"
+              paddingY="10px"
+              fontStyle="oblique"
+              as="b"
+              fontSize="4xl"
+            >
+              Use your own imagination
+            </Text>
+            <Text
+              textAlign="center"
+              paddingY="10px"
+              fontStyle="oblique"
+              fontSize="sm"
+            >
+              Unleash your imagination with our AI-powered children's book
+              creator, designed to help you craft unique, engaging stories.
+              Using advanced technology and an intuitive interface, you can
+              create a one-of-a-kind book in just a few minutes.
+            </Text>
+          </VStack>
+        </GridItem>
+        <GridItem area="main" bg="#D6EDFF">
+          <ImageCarousel />
         </GridItem>
       </Show>
-      <GridItem area="main" bg="#D6EDFF">
-        <Box>
-          Main 1
-        </Box>
-      </GridItem>
-      <Show above="lg">
-        <GridItem area="aside2" bg="#DDEDAA">
-          Aside 2
+      <Show below="lg">
+        <GridItem area="main" bg="white">
+          <VStack justifyContent="normal">
+            <Text
+              textAlign="center"
+              paddingY="10px"
+              fontStyle="oblique"
+              as="b"
+              fontSize="2xl"
+            >
+              Use your own imagination
+            </Text>
+            <Text
+              textAlign="center"
+              paddingY="10px"
+              fontStyle="oblique"
+              fontSize="sm"
+            >
+              Unleash your imagination with our AI-powered children's book
+              creator, designed to help you craft unique, engaging stories.
+              Using advanced technology and an intuitive interface, you can
+              create a one-of-a-kind book in just a few minutes.
+            </Text>
+            <ImageCarousel />
+          </VStack>
         </GridItem>
       </Show>
       <GridItem area="main2" bg="#D6EDFF">
-        Main 2
+        <Show above="lg">Main 2</Show>
+        <Show below="lg">Main 2</Show>
       </GridItem>
-      <Show above="lg">
-        <GridItem area="aside3" bg="#DDEDAA">
-          Aside 3
-        </GridItem>
-      </Show>
       <GridItem area="main3" bg="#D6EDFF">
         Main 3
       </GridItem>
@@ -92,6 +130,5 @@ const App = () => {
     </Grid>
   );
 };
-
 
 export default App;
